@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Lexend-Deca;
+    src: url("./fonts/LexendDeca.ttf");
+}
+
+html, body {
+    font-family: "Lexend-Deca", sans-serif;
+    background-color: #b6fff0;
+    color: white;
+}
+
+/* buttons */
+
+#buttonhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+}
+
+#buttonhead .img, #buttonhead .text {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+#buttonhead .img img {
+    height: 64px;
+    vertical-align: middle;
+}
+
+.text {
+    padding: 6px;
+    border: 3px;
+    border-style: solid;
+    border-radius: 32px;
+    border-color: white;
+    background-color: white;
+}
+
+.img {
+    border: 3px white soild;
+    border-radius: 32px;
+    background-color: white;
+    padding: 3px;
+}
+
+.text, .img {
+    overflow-x: hidden;
+}
+
+/* cards */
+
+#padded {
+    max-width: 40%;
+    margin-top: 15%;
+}
+
+#one {
+    border: 2px solid rgba(126, 126, 126, 0.65);
+    background-color: rgba(175, 175, 175, 0.541);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#two {
+    border: 2px solid rgba(126, 126, 126, 0.65);
+    background-color: rgba(175, 175, 175, 0.541);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 10%;
+}
+
+#three {
+    border: 2px solid rgba(126, 126, 126, 0.65);
+    background-color: rgba(175, 175, 175, 0.541);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 10%;
+}
