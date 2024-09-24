@@ -9,7 +9,15 @@ html, body {
     color: white;
 }
 
-/* buttons */
+/* if on mobile qwq */
+
+@media (max-width: 640px) {
+    #buttonhead {
+        display: none;
+    }
+}
+
+/* pc */
 
 #buttonhead {
     display: flex;
@@ -43,7 +51,7 @@ html, body {
 }
 
 .img {
-    border: 3px white soild;
+    border: 3px white solid;
     border-radius: 32px;
     background-color: white;
     padding: 3px;

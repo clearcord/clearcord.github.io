@@ -34,16 +34,10 @@ function HeadingSwap() {
 }
 
 //detects for mobile or pc / pc zoom
-function DetectZoom() {
+function DetectDevice() {
     const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    const devicePixelRatio = window.devicePixelRatio;
-
-    let zoomLevel = 'normal';
-    if (devicePixelRatio > 1) {
-        zoomLevel = 'zoomed-in';
-    } else if (devicePixelRatio < 1) {
-        zoomLevel = 'zoomed-out';
-    }
+    
+    const zoomLevel = window.innerWidth < window.outerWidth ? 'zoomed-in' : 'normal';
 
     return {
         isMobile,
