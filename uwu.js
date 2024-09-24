@@ -1,5 +1,5 @@
 //store all non func vars here c:
-
+const { isMobile, zoomLevel } = DetectZoom();
 
 //code for everything else below
 const msgary = [
@@ -9,6 +9,7 @@ const msgary = [
     "encrypting your messages",
 ];
 
+//Change the phrases / headings
 function HeadingSwap() {
     var index = 0;
     const headingTextSwap = document.getElementById("switch");
@@ -30,6 +31,30 @@ function HeadingSwap() {
     setInterval(textupdate, 2500);
 
     textupdate();
+}
+
+//detects for mobile or pc / pc zoom
+function DetectZoom() {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    const devicePixelRatio = window.devicePixelRatio;
+
+    let zoomLevel = 'normal';
+    if (devicePixelRatio > 1) {
+        zoomLevel = 'zoomed-in';
+    } else if (devicePixelRatio < 1) {
+        zoomLevel = 'zoomed-out';
+    }
+
+    return {
+        isMobile,
+        zoomLevel,
+    };
+}
+
+if (isMobile) {
+    console.log(`Mobile device is ${zoomLevel}.`);
+} else {
+    console.log(`Desktop device is ${zoomLevel}.`);
 }
 
 HeadingSwap();
