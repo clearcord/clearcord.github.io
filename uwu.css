@@ -7,86 +7,117 @@ html, body {
     font-family: "Lexend-Deca", sans-serif;
     background-color: #b6fff0;
     color: white;
+    margin: 0;
 }
 
 /* if on mobile qwq */
 
 @media (max-width: 640px) {
-    #buttonhead {
-        display: none;
+    .text {
+        visibility: hidden;
+    }
+
+    p {
+        font-size: 6px;
+    }
+
+    h3 {
+        font-size: 8px;
+    }
+
+    .infoimg {
+        width: 100%;
+    }
+    
+    .iconimg {
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        display: flex;
+    }
+
+    .img {
+        display: inline-block;
+        border: 1px white solid;
+        border-radius: 50%;
+        background-color: white;
+        padding: 1px;
+    }
+    
+    /* cards */
+    
+    #padded {
+        max-width: 25%;
+        margin-top: 6%;
+    }
+    
+    #card {
+        border: 2px solid rgba(126, 126, 126, 0.65);
+        background-color: rgba(175, 175, 175, 0.541);
+        border-radius: 16px;
+        overflow: hidden;
+        margin-top: 15%;
     }
 }
 
 /* pc */
-
-#buttonhead {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    padding: 10px;
-}
-
-#buttonhead .img, #buttonhead .text {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    margin: 0 5px;
-}
-
-#buttonhead .img img {
-    height: 64px;
-    vertical-align: middle;
-}
-
-.text {
-    padding: 6px;
-    border: 3px;
-    border-style: solid;
-    border-radius: 32px;
-    border-color: white;
-    background-color: white;
-}
-
-.img {
-    border: 3px white solid;
-    border-radius: 32px;
-    background-color: white;
-    padding: 3px;
-}
-
-.text, .img {
-    overflow-x: hidden;
-}
-
-/* cards */
-
-#padded {
-    max-width: 40%;
-    margin-top: 15%;
-}
-
-#one {
-    border: 2px solid rgba(126, 126, 126, 0.65);
-    background-color: rgba(175, 175, 175, 0.541);
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-#two {
-    border: 2px solid rgba(126, 126, 126, 0.65);
-    background-color: rgba(175, 175, 175, 0.541);
-    border-radius: 16px;
-    overflow: hidden;
-    margin-top: 10%;
-}
-
-#three {
-    border: 2px solid rgba(126, 126, 126, 0.65);
-    background-color: rgba(175, 175, 175, 0.541);
-    border-radius: 16px;
-    overflow: hidden;
-    margin-top: 10%;
+@media (min-width: 641px) {
+    #buttonhead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+    
+    #buttonhead .img, .text {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    
+    #buttonhead .img img {
+        height: 64px;
+        width: 64px;
+        vertical-align: middle;
+    }
+    
+    .text {
+        padding: 6px;
+        border: 3px;
+        border-style: solid;
+        border-radius: 32px;
+        border-color: white;
+        background-color: white;
+    }
+    
+    .img {
+        border: 3px white solid;
+        border-radius: 32px;
+        background-color: white;
+        padding: 3px;
+    }
+    
+    .text {
+        overflow-x: hidden;
+    }
+    
+    /* cards */
+    
+    #padded {
+        max-width: 40%;
+        margin-top: 15%;
+    }
+    
+    #card {
+        border: 2px solid rgba(126, 126, 126, 0.65);
+        background-color: rgba(175, 175, 175, 0.541);
+        border-radius: 16px;
+        overflow: hidden;
+        margin-top: 10%;
+    }
 }

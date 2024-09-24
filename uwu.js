@@ -1,5 +1,9 @@
 //store all non func vars here c:
-const { isMobile, zoomLevel } = DetectZoom();
+
+//extra things here uwu
+HeadingSwap();
+window.onresize = createMenu();
+window.onload = createMenu();
 
 //code for everything else below
 const msgary = [
@@ -34,21 +38,13 @@ function HeadingSwap() {
 }
 
 //detects for mobile or pc / pc zoom
-function DetectDevice() {
-    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-    
-    const zoomLevel = window.innerWidth < window.outerWidth ? 'zoomed-in' : 'normal';
+function createMenu() {
+    const width = window.innerWidth;
 
-    return {
-        isMobile,
-        zoomLevel,
-    };
+    if (width <= 640) {
+        const page = document.querySelectorAll('a.text');
+        page.forEach(page => {
+            page.remove();
+        })
+    }
 }
-
-if (isMobile) {
-    console.log(`Mobile device is ${zoomLevel}.`);
-} else {
-    console.log(`Desktop device is ${zoomLevel}.`);
-}
-
-HeadingSwap();
