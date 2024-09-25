@@ -2,8 +2,10 @@
 
 //extra things here uwu
 HeadingSwap();
-window.onresize = createMenu();
-window.onload = createMenu();
+setInterval(() => {
+    detectScreenSize();
+}, 20);
+
 
 //code for everything else below
 const msgary = [
@@ -38,7 +40,7 @@ function HeadingSwap() {
 }
 
 //detects for mobile or pc / pc zoom
-function createMenu() {
+function detectScreenSize() {
     const width = window.innerWidth;
 
     if (width <= 640) {
@@ -46,5 +48,18 @@ function createMenu() {
         page.forEach(page => {
             page.remove();
         })
+    } else if (width >=640) {
+        const originalPage =  document.getElementById('buttonhead');
+        originalPage.innerHTML = '<a class="text" href="">About</a> <a class="text" href="">Docs</a> <a class="img" href=""><img class="iconimg" src="./imgs/IconwoFrame.png"></a> <!--Download :3--><a class="text" href="mailto:alice@ferretbeans.dev">Contact</a> <a class="text" href="https://github.com/clearcord/">Source</a>'
+    }
+}
+
+//actually creates the silly menuwu >w<
+function menuCreate() {
+    const width = window.innerWidth;
+    
+    if (width <= 640) {
+        const uwu = document.getElementById('buttonhead');
+        uwu.innerHTML = ''
     }
 }
