@@ -1,11 +1,16 @@
 //store all non func vars here c:
+const wyphith = window.innerWidth;
+
+const thesillies = `
+       
+`;
 
 //extra things here uwu
 HeadingSwap();
 setInterval(() => {
     detectScreenSize();
+    menuCreate();
 }, 20);
-
 
 //code for everything else below
 const msgary = [
@@ -43,23 +48,28 @@ function HeadingSwap() {
 function detectScreenSize() {
     const width = window.innerWidth;
 
-    if (width <= 640) {
+    if (width <= 520) {
         const page = document.querySelectorAll('a.text');
         page.forEach(page => {
-            page.remove();
+            page.remove(); // removes the uhm silli buttons when u uhm zoom in or open on mobile ;;
         })
-    } else if (width >=640) {
+    } else if (width >= 520) {
         const originalPage =  document.getElementById('buttonhead');
         originalPage.innerHTML = '<a class="text" href="">About</a> <a class="text" href="">Docs</a> <a class="img" href=""><img class="iconimg" src="./imgs/IconwoFrame.png"></a> <!--Download :3--><a class="text" href="mailto:alice@ferretbeans.dev">Contact</a> <a class="text" href="https://github.com/clearcord/">Source</a>'
     }
 }
 
 //actually creates the silly menuwu >w<
-function menuCreate() {
-    const width = window.innerWidth;
+function menuCreate() {    
+    const yummy = document.getElementById('yummy');
+    const menuwu = document.getElementById('menuwu');
     
-    if (width <= 640) {
-        const uwu = document.getElementById('buttonhead');
-        uwu.innerHTML = ''
+    const silliwidthuwu = window.innerWidth;
+
+        if (silliwidthuwu <= 520) {
+            yummy.addEventListener('click', () => {
+                menuwu.classList.toggle('show');
+                yummy.classList.toggle('rotate');
+            });
+        }
     }
-}
