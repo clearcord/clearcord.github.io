@@ -1,13 +1,15 @@
 @font-face {
-    font-family: Lexend-Deca;
-    src: url("./fonts/LexendDeca.ttf");
+    font-family: OpenSans;
+    src: url("./fonts/OpenSans.ttf");
 }
 
 html, body {
-    font-family: "Lexend-Deca", sans-serif;
-    background-color: #b6fff0;
+    font-family: "OpenSans", sans-serif;
+    background-color: rgb(19, 20, 22);
     color: white;
     margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 /* if on mobile qwq */
@@ -128,30 +130,33 @@ html, body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 50%;
-        padding: 10px;
+        width: 35%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 10px;
+        padding-bottom: 10px;
         margin: 0 auto;
+        margin-top: 2.5%;
+        border: 2px solid rgba(255, 255, 255, 10%);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 3%);
     }
 
-    .navi {
-        display: none;
+    #float {
+        position: absolute;
+        top: 0;
+        right: 1px;
     }
-    
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color: #101010;
+
+    #break {
+        padding: 5%;
     }
     
     #buttonhead .img, .text {
         display: inline-block;
         text-align: center;
         text-decoration: none;
-        color: black;
+        color: white;
         font-size: 18px;
         margin: 0 5px;
     }
@@ -163,19 +168,11 @@ html, body {
     }
     
     .text {
-        padding: 6px;
-        border: 3px;
-        border-style: solid;
-        border-radius: 32px;
-        border-color: white;
-        background-color: white;
+
     }
     
     .img {
-        border: 3px white solid;
-        border-radius: 32px;
-        background-color: white;
-        padding: 3px;
+        
     }
     
     .text {

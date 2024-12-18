@@ -10,6 +10,7 @@ HeadingSwap();
 setInterval(() => {
     detectScreenSize();
     menuCreate();
+    mrpp();
 }, 20);
 
 //code for everything else below
@@ -55,7 +56,7 @@ function detectScreenSize() {
         })
     } else if (width >= 520) {
         const originalPage =  document.getElementById('buttonhead');
-        originalPage.innerHTML = '<a class="text" href="">About</a> <a class="text" href="">Docs</a> <a class="img" href=""><img class="iconimg" src="./imgs/IconwoFrame.png"></a> <!--Download :3--><a class="text" href="mailto:alice@ferretbeans.dev">Contact</a> <a class="text" href="https://github.com/clearcord/">Source</a>'
+        originalPage.innerHTML = '<a class="text" href="">About</a> <a class="text" href="">Docs</a> <a class="img" href=""><img class="iconimg" src="./imgs/IcowonFrame.png"></a> <!--Download :3--><a class="text" href="mailto:alice@ferretbeans.dev">Contact</a> <a class="text" href="https://github.com/clearcord/">Source</a>'
     }
 }
 
@@ -73,3 +74,14 @@ function menuCreate() {
             });
         }
     }
+
+//toggles light mode and then if disabled enables dark mode uwu
+function mrpp() {
+    if (document.getElementById("qwq").checked == false) {
+        document.getElementsByTagName('link')[0].setAttribute("href", "uwu.css");
+        document.getElementById("break").setAttribute("style", "color: white")
+    } else if (document.getElementById("qwq").checked == true) {
+        document.getElementsByTagName('link')[0].setAttribute("href", "owo.css");
+        document.getElementById("break").setAttribute("style", "color: black")
+    }
+}

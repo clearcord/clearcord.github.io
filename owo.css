@@ -1,0 +1,197 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("./fonts/OpenSans.ttf");
+}
+
+html, body {
+    font-family: "OpenSans", sans-serif;
+    background-color: rgb(244, 248, 255);
+    color: black;
+    margin: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* if on mobile qwq */
+@media (max-width: 520px) {
+    #yummy {
+        visibility: visible;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        float: right;
+        vertical-align: middle;
+        border: 1px white solid;
+        border-radius: 50%;
+        background-color: white;
+        padding: 16px;
+    }
+
+    #yummy.rotate {
+        transition: all 0.3s ease-in-out;
+        transform: rotate(90deg);
+    }
+    
+    #carr {
+        height: 4px;
+        width: 100%;
+        background: #333;
+        margin: 4px 0;
+        transition: all 0.3s;
+    }
+    
+    #menuwu {
+        display: none;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: #000 solid;
+        padding: 1%;
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    button {
+        border: lightgrey;
+        border-bottom: black solid;
+        margin: 0;
+        display: flex;
+        width: 100%;
+        padding: 5%;
+        color: black;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #menuwu.show {
+        display: block;
+    }
+
+    #buttonhead {
+        margin: 5%;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .infoimg {
+        width: 100%;
+    }
+    
+    .iconimg {
+        width: 64px;
+        height: 64px;
+        vertical-align: middle;
+        display: flex;
+    }
+
+    .img {
+        display: inline-block;
+        border: 1px white solid;
+        border-radius: 50%;
+        background-color: white;
+        padding: 1px;
+    }
+
+    .navi {
+        visibility: visible;
+        display: block;
+        cursor: pointer;
+    }
+    
+    /* cards */
+    
+    #padded {
+        max-width: 50%;
+        margin-top: 16%;
+    }
+    
+    #card {
+        border: 2px solid rgba(126, 126, 126, 0.65);
+        background-color: rgba(175, 175, 175, 0.541);
+        border-radius: 16px;
+        overflow: hidden;
+        margin-top: 50%;
+    }
+}
+
+/* pc */
+@media (min-width: 521px) {
+    #buttonhead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 35%;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        margin-top: 2.5%;
+        border: 2px solid rgb(227, 229, 230);
+        border-radius: 20px;
+        background: rgb(251, 252, 255);
+    }
+
+
+    #float {
+        position: absolute;
+        top: 0;
+        right: 1px;
+    }
+
+    #break {
+        padding: 5%;
+    }
+    
+    #buttonhead .img, .text {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        margin: 0 5px;
+    }
+    
+    #buttonhead .img img {
+        height: 64px;
+        width: 64px;
+        vertical-align: middle;
+    }
+    
+    .text {
+
+    }
+    
+    .img {
+        
+    }
+    
+    .text {
+        overflow-x: hidden;
+    }
+    
+    /* cards */
+    
+    #padded {
+        max-width: 40%;
+        margin-top: 5%;
+    }
+    
+    #card {
+        border: 2px solid rgba(126, 126, 126, 0.65);
+        background-color: rgba(175, 175, 175, 0.541);
+        border-radius: 16px;
+        overflow: hidden;
+        margin-top: 10%;
+    }
+}
